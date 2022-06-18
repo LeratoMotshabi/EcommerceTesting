@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel suite" >
+
+	<listeners>
+		<listener class-name="com.Magento.Listeners.listenersManager"></listener>
+		
+	</listeners>
+
+
+	<test thread-count="5" name="Mobile Page">
+	
+		<classes>
+			<class name="com.Magento.TestCases.MobilePage" />
+		
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Details TestCase">
+	
+		<classes>
+			<class name="com.Magento.TestCases.DetailsTestCase" />
+		
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Add To Cart TestCase">
+	
+		<classes>
+			<class name="com.Magento.TestCases.AddToCartTestCase" />
+		
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Create Account TestCase">
+	
+		<classes>
+			<class name="com.Magento.TestCases.CreateAccountTestCase" />
+		
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Purchased Product TestCase">
+	
+		<classes>
+			<class name="com.Magento.TestCases.PurchasedProductTestCase" />
+		
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Discount Coupon TestCase">
+	
+		<classes>
+			<class name="com.Magento.TestCases.DiscountCouponTestCase" />
+		
+		</classes>
+	</test> <!-- Test -->
+	
+	
+	
+	
+	
+	
+	
+	
+			
+			
+			
+			
+			
+			
+			
+</suite> <!-- suite -->
