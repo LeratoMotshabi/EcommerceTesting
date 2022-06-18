@@ -2,6 +2,9 @@ package com.Magento.Utilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import jakarta.mail.Message;
@@ -22,15 +25,16 @@ import jakarta.mail.internet.MimeMultipart;
 public class EmailManager {
 
 	public static String server = "Smtp.mail.yahoo.com.";
-	public static String from = "Leratomotshabi@yahoo.com";
-	public static String password = "hjrwcsnkclbrbdbv";
+	public static String from = "tester.selenium@yahoo.com";
+	public static String password = "wvhfnrhvdxflhknf";
 	public static String to = "leramotshabi@gmail.com";
 	public static String subject = "Extent report";
 
 	public static void SendEmail(String FilePath)
 
 	{
-
+		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+				Date date = new Date();
         // Get system properties
         Properties properties = System.getProperties();
 
@@ -62,7 +66,7 @@ public class EmailManager {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            message.setSubject("Extent report " + dateFormat.format(date));
 
             Multipart multipart = new MimeMultipart();
 
