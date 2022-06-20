@@ -3,7 +3,6 @@ package com.Magento.TestCases;
 import java.awt.print.PrinterJob;
 
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
