@@ -26,7 +26,7 @@ public class DetailsTestCase extends BaseClass {
 
 		System.out.println("Detail Price " + actionDriver.getText("SonyXperiaPrice_xpath"));
 
-		soft.assertEquals(SonyCost, "343");
+		soft.assertEquals(SonyCost, DetailPrice);
 
 		soft.assertAll();
 
