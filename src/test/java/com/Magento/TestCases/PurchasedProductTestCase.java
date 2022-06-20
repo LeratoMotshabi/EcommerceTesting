@@ -77,7 +77,7 @@ public class PurchasedProductTestCase extends BaseClass {
 		System.out.println("grandtotal  " + actionDriver.getText("total_xpath").replace("$", "").replace(",", ""));
 		System.out.println("total fee " + Total);
 
-		soft.assertEquals(Total, subTotlaAmount);
+		soft.assertEquals(Total, grandTotal);
 
 		soft.assertAll();
 	}
