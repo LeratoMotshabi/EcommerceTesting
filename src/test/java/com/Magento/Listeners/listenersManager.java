@@ -20,7 +20,7 @@ public class listenersManager implements ITestListener {
 	
 	public static Date date = new Date();
 	static String file = date.toString().replace(":", "_").toString().replace(" ", "_");
-	public static String fileName =System.getProperty("user.dir") + "/src/test/resources/extentReports/" + file + " Reports.html";
+	public static String fileName =System.getProperty("user.dir") + "/src/test/resources/extentReports/" + " Extent.html";
 	public static ExtentReports extent = extentManager.createInstatnce(fileName);
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 	public static String scrPath = System.getProperty("user.dir") + "/src/test/resources/Screenshots/" ;
