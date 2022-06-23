@@ -1,0 +1,1 @@
+{"uuid":"2f21e5bd-2cda-4cbc-b195-1d84403b3ef1","name":"Discount Coupon TestCase","children":["dc40cea1-b3ac-4c3c-882a-0dde9d79d710"],"befores":[],"afters":[{"name":"CloseWebsite","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1655999054501,"stop":1655999058774}],"start":1655999038361,"stop":1655999058854}

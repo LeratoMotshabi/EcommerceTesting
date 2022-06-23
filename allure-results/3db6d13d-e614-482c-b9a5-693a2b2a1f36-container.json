@@ -1,0 +1,1 @@
+{"uuid":"3db6d13d-e614-482c-b9a5-693a2b2a1f36","name":"com.Magento.TestCases.DiscountCouponTestCase","children":["dc40cea1-b3ac-4c3c-882a-0dde9d79d710"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1655999038363,"stop":1655999045803}],"afters":[],"start":1655999038361,"stop":1655999058856}

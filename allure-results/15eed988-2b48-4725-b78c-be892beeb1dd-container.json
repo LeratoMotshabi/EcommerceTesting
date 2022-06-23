@@ -1,0 +1,1 @@
+{"uuid":"15eed988-2b48-4725-b78c-be892beeb1dd","name":"com.Magento.TestCases.MobilePage","children":["d105a64f-f12a-4924-8011-d714118febfe"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1655998806286,"stop":1655998817470}],"afters":[],"start":1655998806143,"stop":1655998833813}
