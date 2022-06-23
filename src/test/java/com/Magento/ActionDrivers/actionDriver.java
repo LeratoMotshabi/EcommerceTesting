@@ -3,6 +3,7 @@ package com.Magento.ActionDrivers;
 
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.regex.Matcher;
@@ -168,15 +169,22 @@ public class actionDriver extends BaseClass {
 	
 	public static String screenshot(String filePath)
 	{
-		
+		String encodedBase64 = null;
+		FileInputStream fileInputStreamReader = null;
 		try {
 			File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(file, new File(filePath));
+			
+			  fileInputStreamReader = new FileInputStream(file);
+			  byte[] bytes = new byte[(int)file.length()];
+			  fileInputStreamReader.read(bytes);
+			  encodedBase64 = new String(Base64.encodeBase64(bytes));
+			;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return filePath;
+		return "data:image/png;base64,"+encodedBase64;
 		
 		
 	}

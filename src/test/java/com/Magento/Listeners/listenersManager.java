@@ -50,10 +50,10 @@ public class listenersManager implements ITestListener {
 
 		Markup m = MarkupHelper.createLabel(methodName, ExtentColor.RED);
 		test.get().fail(m);
-		test.get().fail(message);
-		
-		String scr = "<a  href= \"#\" data-featherlight=" + scrPath + ">Screenshot captured: click to see</a>";
-		test.get().log(Status.INFO, scr, MediaEntityBuilder.createScreenCaptureFromPath(actionDriver.screenshot(scrPath +  file + result.getMethod().getMethodName()+ ".png")).build());
+		test.get().fail(message);		
+		String title = "<a href="+actionDriver.screenshot(scrPath +  file + result.getMethod().getMethodName() + ".png")+" data-featherlight=\"image\"><summary>"+ "Screenshot captured: click to view" + "</summary></a>";
+		test.get().log(Status.FAIL,MediaEntityBuilder.createScreenCaptureFromBase64String(actionDriver.screenshot(scrPath +  file + result.getMethod().getMethodName() + ".png"),title).build());
+		System.out.println(actionDriver.screenshot(scrPath +  file + result.getMethod().getMethodName() + ".png"));
 
 	}
 
